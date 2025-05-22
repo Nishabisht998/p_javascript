@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-transform: capitalize;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      nav {
+        background-color: #970747;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        position: relative;
+      }
+      nav ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* display: none; */
+      }
+      nav ul li {
+        list-style: none;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      .menu-block i {
+        display: none;
+      }
+      @media (max-width: 400px) {
+        nav ul {
+          position: absolute;
+          top: 48px;
+          left: 0;
+          right: 0;
+          background: #970747;
+          flex-direction: column;
+          transition: all 1s;
+          align-items: center;
+          display: none;
+        }
+        .menu-block i {
+          display: block;
+        }
+       
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="logo">
+        <h1>logo</h1>
+      </div>
+      <ul id="ul-list">
+        <li><a href="">home</a></li>
+        <li><a href="">contact us</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">product</a></li>
+      </ul>
+      <div class="menu-block">
+        <i class="fa-solid fa-bars" onclick="openme()"></i>
+      </div>
+    </nav>
+    <script>
+      var menu = document.getElementById("ul-list");
+
+      function openme() {
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "flex";
+        }
+         
+      }
+        window.onresize = function () {
+    if (window.innerWidth > 400) {
+      menu.style.display = ""; // Let CSS handle it
+    }
+  };
+     
+    </script>
+  </body>
+</html>

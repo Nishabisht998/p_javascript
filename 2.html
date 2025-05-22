@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      #box {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ff8811;
+        gap: 10px;
+        flex-direction: column;
+      }
+      .num {
+        padding: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: #fff8f0;
+      }
+      .btnx {
+        gap: 10px;
+      }
+      .btn {
+        padding: 5px 10px;
+        background-color: #392f5a;
+        color: white;
+        /* font-weight: 520px; */
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <input type="number" class="num" id="num1" />
+      <input type="number" class="num" id="num2" />
+      <div class="btnx">
+        <button onclick="sum()" class="btn">+</button>
+        <button onclick="sub()" class="btn">-</button>
+        <button onclick="mul()" class="btn">*</button>
+        <button onclick="divi()" class="btn">/</button>
+      </div>
+      <input type="number" class="num" placeholder="output" id="output" />
+    </div>
+    <script>
+      function sum() {
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        var add = parseInt(x) + parseInt(y);
+        document.getElementById("output").value = add;
+      }
+      function sub() {
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        var add = parseInt(x) - parseInt(y);
+        document.getElementById("output").value = add;
+      }
+      function mul() {
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        var add = parseInt(x) * parseInt(y);
+        document.getElementById("output").value = add;
+      }
+      function divi() {
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        var add = parseInt(x) /parseInt(y);
+        document.getElementById("output").value = add;
+      
+      }
+    </script>
+  </body>
+</html>

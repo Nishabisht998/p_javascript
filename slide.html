@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        height: 400px;
+        width: 700px;
+        /* background: red; */
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img{
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <header>
+        <img src="" alt="hello" />
+      </header>
+    </center>
+    <script>
+      var im = document.querySelector("img");
+      var imges = ["1.jpeg", "2.webp", "3.jpeg", "4.webp", "5.webp"];
+      var a = 0;
+      function demo() {
+        im.src = '../img/' + imges[a];
+        a++;
+        if (a == 5) {
+          a = 0;
+        }
+        setTimeout(demo, 1000);
+      }
+      demo();
+    </script>
+  </body>
+</html>

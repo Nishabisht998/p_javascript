@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .todo-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        /* background: red; */
+        flex-direction: column;
+      }
+      .input {
+        width: 30%;
+        margin: 10px 0px;
+      }
+      p {
+        margin: 0px 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo-back">
+      <div class="input">
+        <input type="text" />
+        <button onclick="demo()">Add</button>
+      </div>
+      <p>
+      </p>
+    </div>
+    <script>
+        var obj=document.querySelector('input')
+        var para=document.querySelector('p')
+        function demo(){
+            // console.log('help');
+            // alert(obj.value)   
+            para.innerText=obj.value
+        }
+       
+    </script>
+  </body>
+</html>

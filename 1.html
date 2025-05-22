@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .block {
+        height: 400px;
+        /* width: 1000px; */
+        background-color: #73946b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #user_input {
+        outline: none;
+        padding: 5px;
+        cursor: pointer;
+        background: #9ebc8a;
+        border: none;
+        transition: all 1s;
+        width: 20%;
+      }
+      #user_input:hover {
+        border-bottom: 1px solid;
+      }
+      .btn {
+        padding: 5px;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <input type="text" id="user_input" />
+      <button class="btn" onclick="add()">Add</button>
+     
+    </div>
+     <div id="output">
+
+      </div>
+    <script>
+      function add() {
+        var yon = confirm("YOU WANT TO ADD THE POINT ");
+        if (yon == true) {
+          var input = document.getElementById("user_input").value;
+          var outt=document.getElementById("output")
+          outt.innerHTML= `entered:${input}`
+        } else {
+        }
+      }
+    </script>
+  </body>
+</html>

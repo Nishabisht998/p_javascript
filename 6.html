@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <div class="block">
+        <h1>counter</h1>
+        <h4>0</h4>
+        <div class="btn">
+          <button onclick="dec()">Decrease</button>
+          <button onclick="res()">Reset</button>
+          <button onclick="inc()">Increase</button>
+        </div>
+      </div>
+    </center>
+    <script>
+      var counter = document.querySelector("h4");
+      var add = 0;
+      function inc() {
+        add++;
+        counter.innerText = add;
+      }
+      function dec() {
+
+          add--;
+        counter.innerText = add;
+      }
+      function res(){
+        counter.innerText=0
+        add=0
+      }
+    </script>
+  </body>
+</html>

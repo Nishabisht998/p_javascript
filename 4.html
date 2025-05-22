@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #block {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border: 2px solid;
+        width: 400px;
+        flex-direction: column;
+        padding: 10px;
+        text-transform: capitalize;
+      }
+      .btn button {
+        text-transform: capitalize !important;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div id="block">
+        <h1>counter</h1>
+        <h6>0</h6>
+        <div class="btn">
+          <button onclick="inc(this)">decrease</button>
+          <button onclick="res()">reset</button>
+          <button onclick="inc(this)">increase</button>
+        </div>
+      </div>
+    </center>
+    <script>
+      num = document.querySelector("h6");
+      var increase = 0;
+      
+      function inc(x) {
+       
+      if(x.innerText=="Decrease")
+      {
+        increase--
+      
+
+      }
+      if(x.innerText=="Increase")
+      {
+
+        increase++
+      
+      }
+    
+      num.innerText=increase
+      }
+      
+      function res() {
+        num.innerText = 0;
+        increase=0
+      }
+    </script>
+  </body>
+</html>
